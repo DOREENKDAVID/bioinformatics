@@ -33,4 +33,5 @@ grep -v "^>" uniq_seq.fa | tr -d '\n' | wc -c
 # Count the frequency of each base
 grep -v "^>" uniq_seq.fa | grep -o . | sort | uniq -c
 
-
+# predicted  files
+cut -d' ' -f2 ../Processed_data/merged.fa | grep "PREDICTED" | wc -l
